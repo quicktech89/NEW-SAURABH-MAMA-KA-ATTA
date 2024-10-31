@@ -8,11 +8,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* Add this to hide overflow */
 }
 .loader-logo {
   width: 80px;
   height: auto;
+  position: relative; /* Ensure the logo is positioned correctly */
+  z-index: 1; /* Make sure the logo appears above the wave */
 }
+
+/* Wave Effect */
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%; /* Adjust width as necessary */
+  height: 50px; /* Height of the wave */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23e0b589" d="M0,128L30,149.3C60,171,120,213,180,213.3C240,213,300,171,360,160C420,149,480,171,540,160C600,149,660,171,720,202.7C780,234,840,256,900,240C960,224,1020,128,1080,128C1140,128,1200,224,1260,245.3C1320,267,1380,213,1410,192L1440,170L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320H0Z"></path></svg>') no-repeat center;
+  animation: wave-animation 2s linear infinite;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
 
 /* Reset */
 * {
@@ -234,6 +259,49 @@ body {
   width: 100%;
   border-radius: 5px;
 }
+.sound-button {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 20px auto; /* Adjust spacing above and below */
+}
+
+.sound-button .sound-icon {
+  width: 40px; /* Small size */
+  height: 40px; /* Maintain aspect ratio */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling and shadow effect */
+}
+
+/* Hover Effect */
+.sound-button .sound-icon:hover {
+  transform: scale(1.15); /* Scale up on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+/* Click Effect */
+.sound-button .sound-icon:active {
+  transform: scale(1.05); /* Scale down slightly on click */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+}
+
+/* Pulsating Animation */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.sound-button .sound-icon.playing {
+  animation: pulse 0.6s infinite; /* Pulsate while playing */
+}
+
 
 /* Hover Card Section */
 .hover-section {

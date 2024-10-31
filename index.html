@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurabh Mama ka Suddh Aata</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+  <!-- Loading Animation -->
+  <div id="loader">
+    <img src="Screenshot 2024-10-31 151239.png" alt="Loader Logo" class="loader-logo">
+  </div>
+
+  <!-- Header Section -->
+  <header class="sticky-header">
+    <div class="top-bar">
+      <div class="logo">
+        <img src="WhatsApp Image 2024-10-31 at 15.10.30_b1d7316b.jpg"Company Logo" class="company-logo">
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="language-switch">
+        <button id="lang-en" class="active">English</button>
+        <button id="lang-hi">हिन्दी</button>
+      </div>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Video Background -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop>
+    <source src="WhatsApp Video 2024-10-31 at 14.47.45_9c15e765.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <h1 data-aos="fade-up" data-aos-delay="200">Welcome to Saurabh Mama's Pure Aata</h1>
+    <h2 data-aos="fade-up" data-aos-delay="300">Pure Quality, Pure Taste!</h2>
+    <p data-aos="fade-up" data-aos-delay="400">Crafted with care for a fresh and authentic taste. Taste the tradition!</p>
+    <button class="cta-button" data-aos="zoom-in" data-aos-delay="500" onclick="redirectToSite()">Order Now</button>
+  </div>
+</section>
+
+<script>
+  function redirectToSite() {
+    // Redirect to the desired site
+    window.location.replace("https://quicktech89.github.io/SAURABH-MAMA-KA-AATA-BUY-SITE/");
+  }
+</script>
+
+  </section>
+
+  <!-- About Us Section with Owner’s Name -->
+  <section class="about" id="about" data-aos="fade-up">
+    <div class="about-card">
+      <img src="seller-placeholder.png" alt="Owner Photo" class="owner-photo">
+      <h3 class="owner-name">Saurabh Kumar Singh</h3>
+      <h2>About Us</h2> 
+      <p>We are committed to providing <span class="highlight">100%</span> organic atta.</p>
+      <p>हम <span class="highlight">100%</span> जैविक आटा प्रदान करने के लिए प्रतिबद्ध हैं।</p>
+    </div>
+  </section>
+
+  <!-- Our Products Section with YouTube Placeholder -->
+  <section class="products" id="products" data-aos="fade-up">
+    <h2>Our Products</h2>
+    <div class="product-card">
+      <video class="product-video" controls>
+        <source src="" type="video/mp4">
+      </video>
+      <p>Discover our high-quality organic atta, crafted with care for an authentic taste.</p>
+    </div>
+  </section>
+
+  <!-- Custom Section with Hover Card -->
+  <section class="hover-section">
+    <div class="hover-card">
+      <p>Hover to explore</p>
+      <div class="hidden-card-content">
+        <img src="Doc1_page-0001.jpg" alt="Additional content">
+        <p>15x10 cm placeholder for final page image</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq" data-aos="fade-up">
+    <h2>FAQs</h2>
+    <div class="tweet">
+      <img src="Mannu.jpg" alt="Profile Picture">
+      <p><strong>Mannu Singh Rajput</strong> <br>saurabh jija ji, ye atta kaisa hai??</p>
+    </div>
+    <div class="tweet">
+      <img src="Tannu.jpg" alt="Profile Picture">
+      <p><strong>Tannu Singh</strong> <br>kya isse aacha roti banega?</p>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="contact" id="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit" class="contact-submit">Submit</button>
+    </form>
+  </section>
+
+  <button class="back-to-top" onclick="scrollToTop()">↑</button>
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
